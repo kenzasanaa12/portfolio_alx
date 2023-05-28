@@ -526,6 +526,12 @@ video {
   width: 100%;
 }
 
+@media (min-width: 300px) {
+  .container {
+    max-width: 300px;
+  }
+}
+
 @media (min-width: 480px) {
   .container {
     max-width: 480px;
@@ -562,8 +568,16 @@ video {
   }
 }
 
+.static {
+  position: static;
+}
+
 .absolute {
   position: absolute;
+}
+
+.relative {
+  position: relative;
 }
 
 .sticky {
@@ -574,12 +588,33 @@ video {
   inset: 0px;
 }
 
+.top-0 {
+  top: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
 .z-50 {
   z-index: 50;
 }
 
 .m-auto {
   margin: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .mb-10 {
@@ -598,10 +633,6 @@ video {
   margin-bottom: 1.75rem;
 }
 
-.mr-6 {
-  margin-right: 1.5rem;
-}
-
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -614,16 +645,48 @@ video {
   margin-top: 0.75rem;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .mt-6 {
   margin-top: 1.5rem;
 }
 
-.mt-7 {
-  margin-top: 1.75rem;
-}
-
 .mt-8 {
   margin-top: 2rem;
+}
+
+.ml-28 {
+  margin-left: 7rem;
+}
+
+.ml-20 {
+  margin-left: 5rem;
+}
+
+.ml-11 {
+  margin-left: 2.75rem;
+}
+
+.mr-8 {
+  margin-right: 2rem;
+}
+
+.ml-44 {
+  margin-left: 11rem;
+}
+
+.ml-40 {
+  margin-left: 10rem;
+}
+
+.mr-20 {
+  margin-right: 5rem;
+}
+
+.mr-5 {
+  margin-right: 1.25rem;
 }
 
 .flex {
@@ -638,6 +701,10 @@ video {
   display: none;
 }
 
+.h-\[23vh\] {
+  height: 23vh;
+}
+
 .h-\[50vh\] {
   height: 50vh;
 }
@@ -650,16 +717,53 @@ video {
   height: 77vh;
 }
 
-.h-\[80vh\] {
-  height: 80vh;
-}
-
 .h-full {
   height: 100%;
 }
 
+.w-full {
+  width: 100%;
+}
+
+.w-96 {
+  width: 24rem;
+}
+
+.w-max {
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.w-\[50vh\] {
+  width: 50vh;
+}
+
+.w-\[50wh\] {
+  width: 50wh;
+}
+
+.w-\[55wh\] {
+  width: 55wh;
+}
+
+.w-\[100wh\] {
+  width: 100wh;
+}
+
 .max-w-lg {
   max-width: 32rem;
+}
+
+.max-w-full {
+  max-width: 100%;
+}
+
+.max-w-screen-lg {
+  max-width: 976px;
+}
+
+.max-w-screen-xl {
+  max-width: 1440px;
 }
 
 .cursor-pointer {
@@ -682,6 +786,10 @@ video {
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .justify-between {
   justify-content: space-between;
 }
@@ -696,6 +804,10 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0px * var(--tw-space-y-reverse));
+}
+
+.border-b {
+  border-bottom-width: 1px;
 }
 
 .bg-gray-950 {
@@ -716,14 +828,23 @@ video {
   padding: 1rem;
 }
 
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.pl-10 {
+  padding-left: 2.5rem;
 }
 
 .text-center {
@@ -824,9 +945,9 @@ video {
   color: rgb(202 138 4 / var(--tw-text-opacity));
 }
 
-@media (min-width: 576px) {
-  .phones\:hidden {
-    display: none;
+@media (min-width: 300px) {
+  .phonesxs\:mt-10 {
+    margin-top: 2.5rem;
   }
 }
 
@@ -840,11 +961,23 @@ video {
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
+
+  .tablet\:ml-0 {
+    margin-left: 0px;
+  }
+
+  .tablet\:hidden {
+    display: none;
+  }
 }
 
 @media (min-width: 976px) {
   .lg\:flex {
     display: flex;
+  }
+
+  .lg\:hidden {
+    display: none;
   }
 }
 
@@ -857,16 +990,32 @@ video {
     margin-bottom: 2.5rem;
   }
 
+  .desktop\:mt-0 {
+    margin-top: 0px;
+  }
+
   .desktop\:mt-12 {
     margin-top: 3rem;
+  }
+
+  .desktop\:h-\[80vh\] {
+    height: 80vh;
   }
 
   .desktop\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .desktop\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .desktop\:gap-2 {
     gap: 0.5rem;
+  }
+
+  .desktop\:gap-3 {
+    gap: 0.75rem;
   }
 
   .desktop\:bg-bg2 {
@@ -897,6 +1046,21 @@ video {
     padding-right: 11rem;
   }
 
+  .desktop\:px-72 {
+    padding-left: 18rem;
+    padding-right: 18rem;
+  }
+
+  .desktop\:py-5 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .desktop\:px-80 {
+    padding-left: 20rem;
+    padding-right: 20rem;
+  }
+
   .desktop\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -910,5 +1074,11 @@ video {
   .desktop\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
+  }
+}
+
+@media (min-width: 1440px) {
+  .xl\:ml-10 {
+    margin-left: 2.5rem;
   }
 }
