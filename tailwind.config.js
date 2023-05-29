@@ -16,7 +16,7 @@ module.exports = {
         'desktop': '1024px',
       },
       backgroundImage: {
-        'hero': 'url("/img/bg.png")',
+        'hero': 'url("/img//bg.png")',
         'bg2': 'url("/img/bg2.png")',
         'bg3': 'url("/img/bg3.png")',
       },
